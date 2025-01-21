@@ -5,18 +5,18 @@ import { ImFacebook2 } from "react-icons/im";
 
 const Footer = () => {
   return (
-    <div className="bg-[#131313] h-[740px] flex justify-center items-center font-syne">
-      <div className="max-w-6xl mx-auto">
+    <div className="bg-[#131313] md:h-[740px] flex justify-center items-center font-syne">
+      <div className="max-w-6xl mx-auto p-6 md:p-0">
         <section>
-          <div className="text-center pt-12">
-            <p className="text-[#FF9142] text-2xl  font-bold mb-8">
+          <div className="text-center pt-6 md:pt-12">
+            <p className="text-[#FF9142] text-sm md:text-2xl  font-bold mb-8">
               Get in Touch With Us
             </p>
-            <h1 className="text-6xl font-bold  border-b-4 w-[600px] border-white mx-auto mb-52">
+            <h1 className="text-2xl md:text-6xl font-bold  border-b-4 w-64 md:w-[600px] border-white mx-auto mb-52">
               info@aaronn.com
             </h1>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-20 pb-24">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-20 pb-12 md:pb-24">
             <div className="pr-24">
               <Image
                 alt="footer-logo"
@@ -50,8 +50,8 @@ const Footer = () => {
           </div>
         </section>
         <section className="footer-bottom text-2xl font-bold text-center">
-          <div className="bg-white border-[1px]"></div>
-          <p className=" py-10">
+          <div className="bg-white border-[0.3px] md:border-[1px]"></div>
+          <p className="py-5 md:py-10">
             &copy; {new Date().getFullYear()}. Ideapeel. All rights reserved.
           </p>
         </section>
