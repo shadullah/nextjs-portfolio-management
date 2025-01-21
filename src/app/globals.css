@@ -3,13 +3,21 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-syne: 'Syne', sans-serif;
+  --font-rubik: 'Rubik', sans-serif;
+}
+
+.font-rubik {
+  font-family: var(--font-rubik);
+}
+
+.font-syne {
+  font-family: var(--font-syne);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #161D21;
     --foreground: #ededed;
   }
 }
@@ -17,5 +25,4 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
 }
