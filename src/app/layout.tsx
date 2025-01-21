@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Rubik, Syne } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/component/shared/Navbar/Navbar";
+import Footer from "@/component/shared/Footer/Footer";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -37,6 +38,7 @@ export default function RootLayout({
       <body className={`${rubik.variable} ${syne.variable} antialiased`}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

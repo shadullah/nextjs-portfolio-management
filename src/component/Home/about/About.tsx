@@ -4,7 +4,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="max-w-7xl mx-auto ">
+    <div className="max-w-6xl mx-auto ">
       <div className="flex justify-between items-center min-h-screen">
         <div className="w-1/2">
           <h1 className="text-6xl font-syne font-bold mb-6">
