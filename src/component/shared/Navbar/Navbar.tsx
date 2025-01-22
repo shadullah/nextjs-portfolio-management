@@ -37,7 +37,7 @@ const Navbar = () => {
               <Link href="/">MY WORKS</Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/contact">
                 <button className="h-[47px] w-[138px] border-2 border-white rounded-[30px]">
                   CONTACT
                 </button>
