@@ -66,7 +66,7 @@ const ContactPage = () => {
         <div className=" my-12 md:my-24 px-12 md:px-0 space-y-8 md:space-y-0">
           <div className="">
             <Image
-              className="h-[638px] rounded-2xl object-cover"
+              className="h-[350px] md:h-[638px] rounded-2xl object-cover"
               width={1148}
               height={636}
               src="/contact.jpg"
@@ -76,7 +76,7 @@ const ContactPage = () => {
         </div>
       </div>
       <div className="my-16 md:my-36 px-6 md:px-0">
-        <div className="font-syne font-bold text-2xl grid grid-cols-1 md:grid-cols-3 text-center">
+        <div className="font-syne font-bold text-2xl grid grid-cols-1 md:grid-cols-3 text-center space-y-8 md:space-y-0">
           <div>
             <button>Street Avenue 21, CA</button>
           </div>
