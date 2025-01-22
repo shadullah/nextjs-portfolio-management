@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Rubik, Syne } from "next/font/google";
+import { Inter, Open_Sans, Rubik, Syne } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/component/shared/Navbar/Navbar";
 import Footer from "@/component/shared/Footer/Footer";
@@ -22,6 +22,14 @@ const syne = Syne({
   variable: "--font-syne",
   subsets: ["latin"],
 });
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
+const opensans = Open_Sans({
+  variable: "--font-open",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Portfolio management",
@@ -35,7 +43,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${rubik.variable} ${syne.variable} antialiased`}>
+      <body
+        className={`${rubik.variable} ${opensans.variable} ${inter.variable} ${syne.variable} antialiased`}
+      >
         <Navbar />
         {children}
         <Footer />

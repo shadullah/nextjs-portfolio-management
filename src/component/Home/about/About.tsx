@@ -21,14 +21,16 @@ const About = () => {
             </button>
           </Link>
         </div>
-        <div className="w-full md:w-1/2 flex justify-end">
+        <div className="relative w-full md:w-1/2 flex justify-end">
           <Image
-            className="rounded-3xl h-[506px] w-[454px] object-cover object-top"
+            className=" rounded-3xl h-[506px] w-[454px] object-cover object-top"
             height={600}
             width={500}
             alt="about"
             src="/about-pic.png"
           />
+          <div className="absolute top-[-3%] w-28 h-8 border-[#FF9142] border-[1px] rounded-[30px]"></div>
+          <div className="absolute bottom-[5%] left-[-5%] md:left-[15%] w-[55px] h-[178px] border-[#FF9142] border-[1px] rounded-[30px]"></div>
         </div>
       </div>
     </div>
