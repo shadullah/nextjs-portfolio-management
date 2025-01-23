@@ -49,10 +49,7 @@ const WorkPage = () => {
               {works.map((row, rowIndex) => (
                 <div
                   key={rowIndex}
-                  className={`grid gap-4`}
-                  style={{
-                    gridTemplateColumns: `repeat(${row.columns}, minmax(0, 1fr))`,
-                  }}
+                  className={`grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-${row.columns}`}
                 >
                   {row.items.map((item, itemIndex) => (
                     <div
