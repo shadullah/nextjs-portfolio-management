@@ -1,4 +1,5 @@
 "use client";
+import { useAuth } from "@/context/Authcontext";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -7,9 +8,15 @@ import { ImCross } from "react-icons/im";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { currentUser, logout } = useAuth();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleLogout = () => {
+    logout();
+    window.location.href = "/login";
   };
 
   return (
@@ -36,6 +43,20 @@ const Navbar = () => {
             <li>
               <Link href="/work">MY WORKS</Link>
             </li>
+            {currentUser && (
+              <li>
+                <Link href="/dashboard">DASHBOARD</Link>
+              </li>
+            )}
+            {currentUser ? (
+              <li>
+                <button onClick={handleLogout}>LOGOUT</button>
+              </li>
+            ) : (
+              <li>
+                <Link href="/login">LOGIN</Link>
+              </li>
+            )}
             <li>
               <Link href="/contact">
                 <button className="h-[47px] w-[138px] border-2 border-white rounded-[30px]">
