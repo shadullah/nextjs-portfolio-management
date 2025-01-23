@@ -1,0 +1,57 @@
+[
+    {
+      "columns": 3,
+      "items": [
+        {
+          "img": "/w1.jpg",
+          "color": "Blue",
+          "title": "Orvillebury"
+        },
+        {
+          "img": "/w2.jpg",
+          "color": "Green",
+          "title": "West Lavada"
+        },
+        {
+          "img": "/work3.png",
+          "color": "Aqua",
+          "title": "Rempelshire"
+        }
+      ]
+    },
+    {
+      "columns": 2,
+      "items": [
+        {
+          "img": "/w3.jpg",
+          "color": "Lime",
+          "title": "Delfinaland"
+        },
+        {
+          "img": "/w4.jpg",
+          "color": "Fuchsia",
+          "title": "Buckridgeburgh"
+        }
+      ]
+    },
+    {
+      "columns": 3,
+      "items": [
+        {
+          "img": "/w5.jpg",
+          "color": "Black",
+          "title": "Pfefferstad"
+        },
+        {
+          "img": "/w6.jpg",
+          "color": "Purple",
+          "title": "South Adrienne"
+        },
+        {
+          "img": "/w7.jpg",
+          "color": "Maroon",
+          "title": "Lake Trevor"
+        }
+      ]
+    }
+  ]
