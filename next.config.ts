@@ -1,11 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  images:{
+    domains:["res.cloudinary.com"]
+  },
   async rewrites() {
     return [
       {
-        source: "/projects/:path*", // This should match the path used in the frontend.
-        destination: "http://localhost:8000/projects/:path*", // This is your backend endpoint.
+        source: "/projects/:path*",
+        destination: "http://localhost:8000/projects/:path*", 
       },
     ];
   },

@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/component/shared/Navbar/Navbar";
 import Footer from "@/component/shared/Footer/Footer";
 import { AuthProvider } from "@/context/Authcontext";
+import { Toaster } from "react-hot-toast";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -48,6 +49,7 @@ export default function RootLayout({
         className={`${rubik.variable} ${opensans.variable} ${inter.variable} ${syne.variable} antialiased`}
       >
         <AuthProvider>
+          <Toaster />
           <Navbar />
           {children}
           <Footer />

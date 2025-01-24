@@ -19,11 +19,16 @@ const ProjectsPage = () => {
   const [pros, setPros] = useState<Project[]>([]);
   const [load, setLoad] = useState(true);
 
+  // url = http://localhost:8000/projects
   useEffect(() => {
     const getCates = async () => {
       try {
-        const res = await axios.get("/projects");
-        console.log(res);
+        const res = await axios.get("http://localhost:8000/projects", {
+          headers: {
+            Accept: "application/json",
+          },
+        });
+        console.log(res.data);
         setPros(res?.data?.items || []);
       } catch (error) {
         console.log(error);

@@ -1,12 +1,15 @@
 "use client";
 
+import axios from "axios";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
+import { FaRegEdit } from "react-icons/fa";
+import { MdDeleteOutline } from "react-icons/md";
 
 interface Project {
   _id: string;
   title: string;
-  image: string;
+  images: string;
   work: string[];
   client: string;
 }
@@ -16,19 +19,23 @@ const ProjectDataTable = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchWorks = async () => {
+    const getCates = async () => {
       try {
-        const response = await fetch("/projects");
-        const data = await response.json();
-        setProjects(data);
+        const res = await axios.get("http://localhost:8000/projects", {
+          headers: {
+            Accept: "application/json",
+          },
+        });
+        console.log(res.data);
+        setProjects(res?.data?.items || []);
       } catch (error) {
-        console.error("Error fetching works:", error);
+        console.log(error);
       } finally {
         setLoading(false);
       }
     };
 
-    fetchWorks();
+    getCates();
   }, []);
 
   if (loading) {
@@ -44,22 +51,29 @@ const ProjectDataTable = () => {
             <th className="p-3 text-left">Project Name</th>
             <th className="p-3 text-left">Work</th>
             <th className="p-3 text-left">Client</th>
+            <th className="p-3 text-left">Update</th>
+            <th className="p-3 text-left">Delete</th>
           </tr>
         </thead>
         <tbody>
-          {projects.length === 0 ? (
+          {projects?.length === 0 ? (
             <tr>
               <td colSpan={4} className="text-center p-4 text-gray-500">
                 No works found
               </td>
             </tr>
           ) : (
-            projects.map((project) => (
-              <tr key={project._id} className="border-b hover:bg-gray-50">
+            projects?.map((project, index) => (
+              <tr
+                key={project._id || index}
+                className="border-b hover:bg-gray-800"
+              >
                 <td className="p-3">
                   <Image
-                    src={project.image[0]}
-                    alt={project.title}
+                    src={project?.images[0]}
+                    alt={project?.title}
+                    width={64}
+                    height={64}
                     className="w-16 h-16 object-cover rounded"
                   />
                 </td>
@@ -68,6 +82,16 @@ const ProjectDataTable = () => {
                   <div className="flex gap-2">{project.work}</div>
                 </td>
                 <td className="p-3">{project.client}</td>
+                <td className="p-3 text-center">
+                  <button className="text-green-200 hover:bg-green-600 p-2 rounded-full transition-all duration-200 text-2xl">
+                    <FaRegEdit />{" "}
+                  </button>
+                </td>
+                <td className="p-3 text-center">
+                  <button className="text-red-200 hover:bg-red-600 p-2 rounded-full transition-all duration-200 text-2xl">
+                    <MdDeleteOutline />
+                  </button>
+                </td>
               </tr>
             ))
           )}
