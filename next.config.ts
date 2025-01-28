@@ -7,8 +7,8 @@ const nextConfig: NextConfig = {
   async rewrites() {
     return [
       {
-        source: "/projects/:path*",
-        destination: "http://localhost:8000/projects/:path*", 
+        source: "/:path*",
+        destination: "http://localhost:8000/:path*", 
       },
     ];
   },

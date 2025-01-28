@@ -11,7 +11,7 @@ const ProjectDashboard = () => {
           <h2 className="text-[30px] font-semibold">Project</h2>
           <p className="text-sm mb-1">Manage all projects</p>
         </div>
-        <Link href={"/dashboard/work/new"}>
+        <Link href={"/dashboard/projects/new"}>
           <button
             className={"text-sm border rounded-md px-3 py-2 flex items-center"}
           >
@@ -20,6 +20,8 @@ const ProjectDashboard = () => {
           </button>
         </Link>
       </div>
+
+      <div className="my-5 border-[0.5px] border-white"></div>
 
       <ProjectDataTable />
     </div>

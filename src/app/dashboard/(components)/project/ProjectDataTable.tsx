@@ -2,7 +2,9 @@
 
 import axios from "axios";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState, useEffect } from "react";
+import toast from "react-hot-toast";
 import { FaRegEdit } from "react-icons/fa";
 import { MdDeleteOutline } from "react-icons/md";
 
@@ -37,6 +39,25 @@ const ProjectDataTable = () => {
 
     getCates();
   }, []);
+
+  const handleDelete = async (id: string) => {
+    const confirmDelete = window.confirm(
+      "Are you sure you want to delete the project??"
+    );
+
+    if (!confirmDelete) {
+      return;
+    }
+
+    try {
+      await axios.delete(`http://localhost:8000/projects/${id}`);
+      setProjects((prev) => prev.filter((project) => project._id !== id));
+      toast.success("deleted success!!", { duration: 3000 });
+    } catch (error) {
+      console.log(error);
+      toast.error("Failed to delete project!!!");
+    }
+  };
 
   if (loading) {
     return <div>Loading...</div>;
@@ -83,12 +104,17 @@ const ProjectDataTable = () => {
                 </td>
                 <td className="p-3">{project.client}</td>
                 <td className="p-3 text-center">
-                  <button className="text-green-200 hover:bg-green-600 p-2 rounded-full transition-all duration-200 text-2xl">
-                    <FaRegEdit />{" "}
-                  </button>
+                  <Link href={`/dashboard/projects/${project._id}`}>
+                    <button className="text-green-200 hover:bg-green-600 p-2 rounded-full transition-all duration-200 text-2xl">
+                      <FaRegEdit />{" "}
+                    </button>
+                  </Link>
                 </td>
                 <td className="p-3 text-center">
-                  <button className="text-red-200 hover:bg-red-600 p-2 rounded-full transition-all duration-200 text-2xl">
+                  <button
+                    onClick={() => handleDelete(project._id)}
+                    className="text-red-200 hover:bg-red-600 p-2 rounded-full transition-all duration-200 text-2xl"
+                  >
                     <MdDeleteOutline />
                   </button>
                 </td>

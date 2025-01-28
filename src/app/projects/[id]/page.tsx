@@ -21,9 +21,13 @@ const ProjectDetails = ({ params }: { params: { id: string } }) => {
   useEffect(() => {
     const fetchDetails = async () => {
       try {
-        const res = await axios.get(`http://localhost:8000/projects/${id}`);
-        console.log(res.data); // Ensure the response structure is correct
-        setProj(res.data); // Set the project data correctly
+        const res = await axios.get(`http://localhost:8000/projects/${id}`, {
+          headers: {
+            Accept: "application/json",
+          },
+        });
+        console.log(res.data);
+        setProj(res.data);
       } catch (err) {
         console.error(err);
         toast.error("Details could not be fetched", { duration: 3000 });
@@ -51,7 +55,7 @@ const ProjectDetails = ({ params }: { params: { id: string } }) => {
       </div>
       <div>
         {" "}
-        <div className="px-6 md:px-0 mt-24">
+        {/* <div className="px-6 md:px-0 mt-24">
           <h1 className="font-syne text-4xl md:text-7xl font-bold mb-3">
             {project?.title}
           </h1>
@@ -80,7 +84,7 @@ const ProjectDetails = ({ params }: { params: { id: string } }) => {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
