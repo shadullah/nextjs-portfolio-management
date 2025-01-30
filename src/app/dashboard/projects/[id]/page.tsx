@@ -1,8 +1,15 @@
 import React from "react";
 
-const UpdateProject = ({ id }) => {
-  console.log(id);
-  return <div>this is a form</div>;
+const UpdateProject = () => {
+  // const router = useRouter();
+  // const { id } = router.query;
+  // console.log(id);
+  return (
+    <div>
+      <p>Update Porject</p>
+      <h1>ID: </h1>
+    </div>
+  );
 };
 
 export default UpdateProject;

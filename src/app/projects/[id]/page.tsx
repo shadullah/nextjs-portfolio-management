@@ -1,5 +1,6 @@
 "use client";
 import axios from "axios";
+import { useParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
@@ -12,7 +13,8 @@ interface Project {
   work: string[];
 }
 
-const ProjectDetails = ({ params }: { params: { id: string } }) => {
+const ProjectDetails = () => {
+  const params = useParams();
   const { id } = params;
   console.log(id);
   const [project, setProj] = useState<Project | null>(null);
@@ -20,13 +22,9 @@ const ProjectDetails = ({ params }: { params: { id: string } }) => {
 
   useEffect(() => {
     const fetchDetails = async () => {
+      setLoad(true); // Set loading to true before fetching
       try {
-        const res = await axios.get(`http://localhost:8000/projects/${id}`, {
-          headers: {
-            Accept: "application/json",
-          },
-        });
-        console.log(res.data);
+        const res = await axios.get(`http://localhost:8000/projects/${id}`);
         setProj(res.data);
       } catch (err) {
         console.error(err);
@@ -35,11 +33,20 @@ const ProjectDetails = ({ params }: { params: { id: string } }) => {
         setLoad(false);
       }
     };
-    fetchDetails();
+
+    if (id) {
+      // Check if id is available
+      fetchDetails();
+    }
   }, [id]);
 
   if (load) {
     return <p className="text-center text-lg font-bold my-12">Loading...</p>;
+  }
+
+  if (!project) {
+    // Handle the case where the project is not found
+    return <p>Project not found.</p>;
   }
 
   return (
@@ -54,11 +61,10 @@ const ProjectDetails = ({ params }: { params: { id: string } }) => {
         <div className="border-[1px] border-white mb-24"></div>
       </div>
       <div>
-        {" "}
-        {/* <div className="px-6 md:px-0 mt-24">
-          <h1 className="font-syne text-4xl md:text-7xl font-bold mb-3">
-            {project?.title}
-          </h1>
+        <h1 className="font-syne text-4xl md:text-7xl font-bold mb-3">
+          {project?.title}
+        </h1>{" "}
+        <div className="px-6 md:px-0 mt-24">
           <p className="font-rubik text-sm md:text-lg font-medium text-[#949494] mb-14 md:mb-20">
             {project?.description}
           </p>
@@ -84,7 +90,7 @@ const ProjectDetails = ({ params }: { params: { id: string } }) => {
               ))}
             </div>
           </div>
-        </div> */}
+        </div>
       </div>
     </div>
   );
