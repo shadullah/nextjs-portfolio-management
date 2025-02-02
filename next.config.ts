@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
   //   return [
   //     {
   //       source: "/:path*",
-  //       destination: "http://localhost:8000/:path*", 
+  //       destination: "https://nestjs-crud-ruddy.vercel.app/:path*", 
   //     },
   //   ];
   // },

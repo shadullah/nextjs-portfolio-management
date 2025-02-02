@@ -23,11 +23,14 @@ const ProjectDataTable = () => {
   useEffect(() => {
     const getCates = async () => {
       try {
-        const res = await axios.get("http://localhost:8000/projects", {
-          headers: {
-            Accept: "application/json",
-          },
-        });
+        const res = await axios.get(
+          "https://nestjs-crud-ruddy.vercel.app/projects",
+          {
+            headers: {
+              Accept: "application/json",
+            },
+          }
+        );
         console.log(res.data);
         setProjects(res?.data?.items || []);
       } catch (error) {
@@ -50,7 +53,7 @@ const ProjectDataTable = () => {
     }
 
     try {
-      await axios.delete(`http://localhost:8000/projects/${id}`);
+      await axios.delete(`https://nestjs-crud-ruddy.vercel.app/projects/${id}`);
       setProjects((prev) => prev.filter((project) => project._id !== id));
       toast.success("deleted success!!", { duration: 3000 });
     } catch (error) {
