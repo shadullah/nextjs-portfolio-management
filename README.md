@@ -4,6 +4,12 @@
 
 This project consists of a Next.js frontend integrated with a NestJS backend. The frontend is built using React and TypeScript, while the backend utilizes NestJS with MongoDB (via Mongoose) for data persistence. The backend also supports image uploads via Cloudinary and is deployed on Vercel.
 
+## Live link frontend
+
+```bash
+$ https://nextjs-portfolio-management.vercel.app/
+```
+
 ## Tech Stack
 
 Frontend:
