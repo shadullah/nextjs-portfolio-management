@@ -172,7 +172,7 @@ const ProjectsPage = () => {
                 </>
               ) : (
                 <>
-                  <div className="text-red-600 font-bold text-center">
+                  <div className="text-red-600 font-bold text-center my-24">
                     Server Error Or No Projects Found
                   </div>
                 </>
