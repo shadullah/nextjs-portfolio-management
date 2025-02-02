@@ -1,8 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Next.js Frontend with NestJS Backend
 
-## Getting Started
+# Overview
 
-First, run the development server:
+This project consists of a Next.js frontend integrated with a NestJS backend. The frontend is built using React and TypeScript, while the backend utilizes NestJS with MongoDB (via Mongoose) for data persistence. The backend also supports image uploads via Cloudinary and is deployed on Vercel.
+
+## Tech Stack
+
+Frontend:
+
+- Framework: Next.js (TypeScript)
+
+- Styling: Tailwind CSS / CSS Modules
+
+- State Management: React Context API
+
+- Routing: Next.js App Router (or Pages Router)
+
+- Deployment: Vercel
+
+Backend:
+
+- Framework: NestJS (TypeScript)
+
+- Database: MongoDB with Mongoose ORM
+
+- Storage: Cloudinary (for image uploads)
+
+- Hosting: Vercel
+
+## Project Setup
+
+Install
 
 ```bash
 npm run dev
@@ -14,23 +42,32 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+✅ Scalable Folder Structure for production-ready applications.
+✅ CRUD API Endpoints for handling resources efficiently.
+✅ Image Upload & Deletion using Cloudinary.
+✅ MongoDB Integration with Mongoose ORM.
+✅ TypeScript for type safety and maintainability.
+✅ Next.js API Consumption via Fetch or Axios.
+✅ Deployed on Vercel for easy cloud access.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Lessons Learned
 
-## Learn More
+- Setting up a full-stack project with Next.js and NestJS.
 
-To learn more about Next.js, take a look at the following resources:
+- Implementing API calls from the frontend to the backend.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Managing Cloudinary integration for media storage.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Writing Mongoose schemas and handling MongoDB connections.
 
-## Deploy on Vercel
+- Using TypeScript in both frontend and backend development.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Deploying both frontend and backend to Vercel.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contact
+
+If you have any questions or suggestions, feel free to reach out!
+
+🚀 This project marks an important milestone in my journey as a full-stack developer using Next.js and NestJS! 🚀
