@@ -74,7 +74,7 @@ const ProjectsPage = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-12 mx-auto my-24 p-1 md:p-0">
                         {pros?.slice(0, 4).map((pro, index) => (
                           <div
-                            className="w-[560px] h-[768px]"
+                            className="md:w-[560px] md:h-[768px]"
                             key={pro?._id || index}
                           >
                             <Link href={`/projects/${pro?._id}`}>
@@ -86,7 +86,7 @@ const ProjectsPage = () => {
                                     height={620}
                                     width={560}
                                     unoptimized
-                                    className="h-[620px] w-[560px] rounded-2xl"
+                                    className="h-[310px] w-[310px] md:h-[620px] md:w-[560px] rounded-2xl"
                                   />
                                 </div>
                               </div>
@@ -129,7 +129,7 @@ const ProjectsPage = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-12 mx-auto my-24 p-1 md:p-0">
                         {pros?.map((pro, index) => (
                           <div
-                            className="w-[560px] h-[768px]"
+                            className="md:w-[560px] md:h-[768px]"
                             key={pro?._id || index}
                           >
                             <Link href={`/projects/${pro?._id}`}>
@@ -141,7 +141,7 @@ const ProjectsPage = () => {
                                     height={620}
                                     width={560}
                                     unoptimized
-                                    className="h-[620px] w-[560px] rounded-2xl"
+                                    className="md:h-[620px] md:w-[560px] rounded-2xl"
                                   />
                                 </div>
                               </div>
