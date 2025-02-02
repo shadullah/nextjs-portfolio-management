@@ -25,9 +25,7 @@ const ProjectDetails = () => {
     const fetchDetails = async () => {
       setLoad(true); // Set loading to true before fetching
       try {
-        const res = await axios.get(
-          `https://nestjs-crud-ruddy.vercel.app/projects/${id}`
-        );
+        const res = await axios.get(` /projects/${id}`);
         setProj(res.data);
       } catch (err) {
         console.error(err);

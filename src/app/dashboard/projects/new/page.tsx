@@ -19,15 +19,11 @@ const ProjectForm = () => {
     }
 
     try {
-      const res = await axios.post(
-        "https://nestjs-crud-ruddy.vercel.app/projects",
-        formData,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        }
-      );
+      const res = await axios.post(" /projects", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
       console.log("Response data:", res.data);
 
       if (res.status === 201) {

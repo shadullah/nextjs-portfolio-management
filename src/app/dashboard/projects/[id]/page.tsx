@@ -25,9 +25,7 @@ const UpdateProject = () => {
   useEffect(() => {
     const fetchDetails = async () => {
       try {
-        const res = await axios.get(
-          `https://nestjs-crud-ruddy.vercel.app/projects/${id}`
-        );
+        const res = await axios.get(` /projects/${id}`);
         setProj(res.data);
       } catch (error) {
         console.error("Error fetching project:", error);
@@ -49,15 +47,11 @@ const UpdateProject = () => {
     }
 
     try {
-      const res = await axios.put(
-        `https://nestjs-crud-ruddy.vercel.app/projects/${id}`,
-        formData,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        }
-      );
+      const res = await axios.put(` /projects/${id}`, formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
       console.log("Response data:", res.data);
 
       if (res.status === 200) {
