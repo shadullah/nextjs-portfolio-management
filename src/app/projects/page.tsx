@@ -58,7 +58,7 @@ const ProjectsPage = () => {
                 <>
                   {home ? (
                     <>
-                      <h1 className="font-bold text-[64px] font-syne text-center">
+                      <h1 className="font-bold text-5xl md:text-[64px] font-syne text-center">
                         My Projects Hightlight
                       </h1>
                       <div className=" flex justify-center mt-16">

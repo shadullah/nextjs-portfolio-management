@@ -78,11 +78,25 @@ const Navbar = () => {
                 <Link href="/">HOME</Link>
               </li>
               <li>
-                <Link href="/">ABOUT ME</Link>
+                <Link href="/about">ABOUT ME</Link>
               </li>
               <li>
-                <Link href="/">MY WORKS</Link>
+                <Link href="/work">MY WORKS</Link>
               </li>
+              {currentUser && (
+                <li>
+                  <Link href="/dashboard">DASHBOARD</Link>
+                </li>
+              )}
+              {currentUser ? (
+                <li>
+                  <button onClick={handleLogout}>LOGOUT</button>
+                </li>
+              ) : (
+                <li>
+                  <Link href="/login">LOGIN</Link>
+                </li>
+              )}
               <li>
                 <Link href="/">
                   <button className="h-[47px] w-[138px] border-2 border-white rounded-[30px]">
