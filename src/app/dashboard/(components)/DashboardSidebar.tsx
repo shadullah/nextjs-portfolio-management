@@ -15,12 +15,12 @@ export default function DashboardSideBar() {
                 key={tab.id}
                 className={`flex items-center gap-2 rounded-lg px-3 py-2 transition-all ${
                   pathname === tab.path
-                    ? "bg-gray-900 text-gray-100 dark:bg-gray-50 dark:text-gray-800"
-                    : "text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+                    ? "hover:bg-green-700"
+                    : "hover:bg-gray-700"
                 }`}
                 href={tab.path}
               >
-                <div className="border rounded-lg border-gray-400 p-1 bg-white">
+                <div className="border rounded-lg border-gray-400 p-1">
                   {tab.icon}
                 </div>
                 {tab.linkText}

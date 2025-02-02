@@ -41,8 +41,8 @@ const ProjectForm = () => {
     <div>
       <div className="flex items-center justify-between">
         <div>
-          <h2 className="text-[30px] font-bold">Work</h2>
-          <p className="text-sm mb-1">Create a new work</p>
+          <h2 className="text-[30px] font-bold">Project</h2>
+          <p className="text-sm mb-1">Create a new Project</p>
         </div>
         <Link href={"/dashboard/projects"}>
           <button
