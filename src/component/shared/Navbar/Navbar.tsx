@@ -24,12 +24,7 @@ const Navbar = () => {
       <div className="flex justify-between items-center py-6 md:py-0 px-4 md:px-0">
         <Link href="/">
           <div>
-            <Image
-              height={22}
-              width={125}
-              src="/Brand-logo.svg"
-              alt="logo"
-            ></Image>
+            <Image height={22} width={125} src="/logoM.png" alt="logo"></Image>
           </div>
         </Link>
         <div className="hidden md:block">
@@ -38,7 +33,7 @@ const Navbar = () => {
               <Link href="/">HOME</Link>
             </li>
             <li>
-              <Link href="/about">ABOUT ME</Link>
+              <Link href="/about">ABOUT</Link>
             </li>
             <li>
               <Link href="/work">MY WORKS</Link>
@@ -59,7 +54,7 @@ const Navbar = () => {
             )}
             <li>
               <Link href="/contact">
-                <button className="h-[47px] w-[138px] border-2 border-white rounded-[30px]">
+                <button className="h-[47px] w-[138px] border-2 border-green-600 hover:bg-green-600 rounded-[30px]">
                   CONTACT
                 </button>
               </Link>
