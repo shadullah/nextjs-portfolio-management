@@ -20,11 +20,10 @@ const AboutPage = () => {
             <span className="text-orange-600">BIODIESEL</span>
           </h1>
           <p className="md:w-1/2 text-[#949494] text-[21px] font-semibold leading-10 p-4 md:p-8 mt-3 font-open">
-            Create custom Designs with AARONN that converts more visitors than
-            any website. With lots of unique design, you can easily select a
-            logo without hassle. Create custom landing logos with AARONN that
-            converts more visitors than any website. With lots of revisions, you
-            can easily build a logo without problem.
+            Extracting BIODIESEL from natural resources using Algae
+            <br /> <br />
+            BIODIESEL can directly replace diesel in conventional diesel engines
+            without significant modifications.
           </p>
         </div>
         <div className="relative block md:flex justify-between my-12 md:my-24 px-12 md:px-0 space-y-8 md:space-y-0">
@@ -33,7 +32,7 @@ const AboutPage = () => {
               className="md:h-[515px] md:w-[361px] rounded-2xl"
               width={361}
               height={515}
-              src="/about-pic.png"
+              src="/lab-work.jpeg"
               alt="about1"
             />
           </div>
@@ -42,7 +41,7 @@ const AboutPage = () => {
               width={750}
               height={515}
               className="md:h-[515px] md:w-[750px] rounded-2xl"
-              src="/about2.jpg"
+              src="/lab-work1.jpeg"
               alt="about2"
             />
           </div>
