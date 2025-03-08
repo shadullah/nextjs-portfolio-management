@@ -12,7 +12,7 @@ const Footer = () => {
             <p className="text-[#FF9142] text-sm md:text-2xl  font-bold mb-8">
               Get in Touch With Us
             </p>
-            <h1 className="text-2xl md:text-5xl font-bold  border-b-4 w-64 md:w-[870px] border-white mx-auto mb-52">
+            <h1 className="text-xl md:text-5xl font-bold  border-b-4 w-64 md:w-[870px] border-white mx-auto mb-52">
               eco.extract.industry@gmail.com
             </h1>
           </div>
