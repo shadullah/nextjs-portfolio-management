@@ -6,10 +6,10 @@ const ContactPage = () => {
     <div className="max-w-6xl mx-auto my-16 md:my-36">
       <div className="px-6 md:px-0">
         <h1 className="font-syne text-4xl md:text-7xl font-bold mb-3">
-          Contact Me
+          Contact Us
         </h1>
         <p className="font-rubik text-sm md:text-lg font-medium text-[#949494] mb-14 md:mb-20">
-          For Any Project Knock Us
+          For Any Info Knock Us
         </p>
         <div className="border-[1px] border-white mb-24"></div>
       </div>
@@ -78,13 +78,13 @@ const ContactPage = () => {
       <div className="my-16 md:my-36 px-6 md:px-0">
         <div className="font-syne font-bold text-2xl grid grid-cols-1 md:grid-cols-3 text-center space-y-8 md:space-y-0">
           <div>
-            <button>Street Avenue 21, CA</button>
+            <button>MUJTOBA ALI HALL, SUST</button>
           </div>
           <div>
-            <button>+9 0283353</button>
+            <button>+880 1629837675</button>
           </div>
           <div>
-            <button>info@aaronn.com</button>
+            <button>eco.extract.industry@gmail.com</button>
           </div>
         </div>
       </div>
