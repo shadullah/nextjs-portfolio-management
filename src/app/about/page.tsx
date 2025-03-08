@@ -6,17 +6,18 @@ const AboutPage = () => {
     <div className="max-w-6xl mx-auto my-16 md:my-36">
       <div className="px-6 md:px-0">
         <h1 className="font-syne text-4xl md:text-7xl font-bold mb-3">
-          About Me
+          About Us
         </h1>
         <p className="font-rubik text-sm md:text-lg font-medium text-[#949494] mb-14 md:mb-20">
-          Little Brief About Myself
+          Little Brief About Ourself
         </p>
         <div className="border-[1px] border-white mb-24"></div>
       </div>
       <div>
         <div className="block md:flex justify-between">
           <h1 className="text-4xl md:text-[80px]  font-syne font-bold leading-snug md:w-1/2 p-4">
-            My mission is to make design easier.
+            Our mission is to make sustainable{" "}
+            <span className="text-orange-600">BIODIESEL</span>
           </h1>
           <p className="md:w-1/2 text-[#949494] text-[21px] font-semibold leading-10 p-4 md:p-8 mt-3 font-open">
             Create custom Designs with AARONN that converts more visitors than
@@ -51,7 +52,7 @@ const AboutPage = () => {
       </div>
       <div className="my-16 md:my-36 px-6 md:px-0">
         <p className="font-syne text-2xl md:text-5xl mb-12 font-bold">
-          Follow me on:
+          Follow us on:
         </p>
         <div className="font-inter font-bold text-[32px] text-[#949494] grid grid-cols-1 md:grid-cols-4">
           <div>

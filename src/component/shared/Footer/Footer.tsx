@@ -12,8 +12,8 @@ const Footer = () => {
             <p className="text-[#FF9142] text-sm md:text-2xl  font-bold mb-8">
               Get in Touch With Us
             </p>
-            <h1 className="text-2xl md:text-6xl font-bold  border-b-4 w-64 md:w-[600px] border-white mx-auto mb-52">
-              info@aaronn.com
+            <h1 className="text-2xl md:text-5xl font-bold  border-b-4 w-64 md:w-[870px] border-white mx-auto mb-52">
+              eco.extract.industry@gmail.com
             </h1>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-20 pb-12 md:pb-24">
@@ -22,19 +22,18 @@ const Footer = () => {
                 alt="footer-logo"
                 height={42.42}
                 width={241}
-                src="/Brand-logo.svg"
+                src="/logoM.png"
               />
             </div>
             <div className="text-2xl font-bold">
-              <p className="">Street Avenue 21, CA</p>
+              <p className="">MUJTOBA ALI HALL, SUST</p>
               <p>
-                0-8-00-888-
+                +880
                 <br />
-                000
+                1629837675
               </p>
             </div>
             <div>
-              <p className="text-2xl font-bold">+9 0283353</p>
               <div className="flex items-center text-[#C4C4C4] space-x-3 mt-4 ">
                 <span className="text-2xl">
                   <ImFacebook2 />
@@ -52,7 +51,8 @@ const Footer = () => {
         <section className="footer-bottom text-2xl font-bold text-center">
           <div className="bg-white border-[0.3px] md:border-[1px]"></div>
           <p className="py-5 md:py-10">
-            &copy; {new Date().getFullYear()}. Ideapeel. All rights reserved.
+            &copy; {new Date().getFullYear()}. All rights reserved by
+            ECO-EXTRACT.
           </p>
         </section>
       </div>

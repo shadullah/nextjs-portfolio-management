@@ -36,7 +36,7 @@ const Navbar = () => {
               <Link href="/about">ABOUT</Link>
             </li>
             <li>
-              <Link href="/work">MY WORKS</Link>
+              <Link href="/work">OUR WORKS</Link>
             </li>
             {currentUser && (
               <li>
@@ -73,10 +73,10 @@ const Navbar = () => {
                 <Link href="/">HOME</Link>
               </li>
               <li>
-                <Link href="/about">ABOUT ME</Link>
+                <Link href="/about">OUR ABOUT</Link>
               </li>
               <li>
-                <Link href="/work">MY WORKS</Link>
+                <Link href="/work">OUR WORKS</Link>
               </li>
               {currentUser && (
                 <li>
