@@ -3,19 +3,19 @@
       "columns": 3,
       "items": [
         {
-          "img": "/w1.jpg",
-          "color": "Blue",
-          "title": "Orvillebury"
+          "img": "/works-collect.jpeg",
+          "color": "First Step",
+          "title": "Algae collection"
         },
         {
-          "img": "/w2.jpg",
-          "color": "Green",
-          "title": "West Lavada"
+          "img": "/flask.jpeg",
+          "color": "Conical",
+          "title": "Flask for Collect"
         },
         {
-          "img": "/work3.png",
-          "color": "Aqua",
-          "title": "Rempelshire"
+          "img": "/Algae.jpg",
+          "color": "Img",
+          "title": "Algae"
         }
       ]
     },
@@ -23,14 +23,14 @@
       "columns": 2,
       "items": [
         {
-          "img": "/w3.jpg",
-          "color": "Lime",
-          "title": "Delfinaland"
+          "img": "/al-poly.jpeg",
+          "color": "Small",
+          "title": "Algae in Poly collected"
         },
         {
-          "img": "/w4.jpg",
-          "color": "Fuchsia",
-          "title": "Buckridgeburgh"
+          "img": "/pond.jpeg",
+          "color": "In Pond",
+          "title": "Pond Algae works"
         }
       ]
     },

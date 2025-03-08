@@ -36,7 +36,7 @@ const WorkPage = () => {
       <div className="max-w-6xl mx-auto my-16 md:my-36">
         <div className="px-6 md:px-0">
           <h1 className="font-syne text-4xl md:text-7xl font-bold mb-3">
-            My works
+            Our works
           </h1>
           <p className="font-rubik text-sm md:text-lg font-medium text-[#949494] mb-14 md:mb-20">
             Showcase About Works
